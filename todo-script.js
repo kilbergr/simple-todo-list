@@ -24,6 +24,10 @@ form.addEventListener("keydown", function(event){
 });
 
 uls.addEventListener("click", function(event){
-	event.target.className = "completed";
-	
+	if(e.srcElement.className){
+		e.srcElement.className="";
+	}
+	else {
+		event.target.className = "completed";
+	}
 })
