@@ -1,8 +1,9 @@
 var form = document.querySelector("form");
 var addNew = document.getElementsByTagName("ul")
 var input = document.getElementById("list"); 
+var uls = document.getElementById("items")
 
-form.addEventListener("click", function(event){
+form.addEventListener("submit", function(event){
 	event.preventDefault();
   	var newItem = document.createElement("LI");
   	var text = document.createTextNode(input.value);
@@ -21,4 +22,9 @@ form.addEventListener("keydown", function(event){
 	    document.getElementById("list").value='';
 	}
 });
+
+uls.addEventListener("click", function(event){
+	event.target.className = "completed";
+	
+})
 
